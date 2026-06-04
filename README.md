@@ -13,14 +13,14 @@
 
 ---
 ## Installing VMs | Sysmon | Splunk Setup
-- Download Windows ISO, Kali Linux VM
-Install Windows VM from created ISO file. 
+- Download Windows ISO, Kali Linux VM  
+Install Windows VM from created ISO file.  
 Extract Kali Linux Zip and Import VM.  
 
-- Copy & paste Splunk Enterprise Installer to Windows VM.
+- Copy & paste Splunk Enterprise Installer to Windows VM.  
 Install Splunk Enterprise from MSI installer to VM.  
 
-- Copy & paste Sysmon, Sysmon Config to VM.
+- Copy & paste Sysmon, Sysmon Config to VM.  
 Unzip Sysmon folder, copy and paste sysmonconfig.xml into directory where Sysmon64.exe is located.  
 Download provided PowerShell Script and copy, paste into Sysmon root folder to 1 click install Sysmon.
 
@@ -43,4 +43,13 @@ Create an IP Address of your choosing, example: 192.168.0.100
 Click OK  
 Open CMD/PowerShell, type ipconfig to verify IP.
 
-- On Kali Linux
+- On Kali Linux:  
+Click the Ethernet icon in top right  
+Select Edit Connections, select the wired connection  
+Double click the network adpater, go to IPv4 Settings   
+Set Method to Manual  
+Click Add under Addresses:  
+Create an IP Address of your choosing, example: 192.168.0.200   
+Netmask: 24  
+Click Save  
+Open terminal, type ifconfig to verify IP.
