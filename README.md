@@ -21,4 +21,6 @@
 ---
 ## Sysmon | Splunk Setup
 - Copy & Paste Sysmon, Sysmon Config and Splunk Installer to Windows VM.
-- 
+- Install Splunk from MSI installer to VM.
+- Unzip Sysmon folder, copy and paste sysmonconfig.xml into directory where Sysmon64.exe is located.
+- Download provided PowerShell Script and copy, paste into Sysmon root folder to 1 click install Sysmon.
