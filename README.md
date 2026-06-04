@@ -53,3 +53,18 @@ Create an IP Address of your choosing, example: 192.168.0.200
 Netmask: 24  
 Click Save  
 Open terminal, type ifconfig to verify IP.
+
+---
+## Verify Network
+- Windows:  
+In CMD/PowerShell type ping 192.168.0.200 (Your selected IP for Kali).  
+- Kali Linux:  
+In terminal type ping 192.168.0.100 (Your selected IP for WIndows).
+
+---
+## Splunk Configuration
+- Download provided inputs.conf  
+Copy, paste inputs.conf into the Splunk directory for collecting sysmon logs "C:\Program Files\Splunk\etc\system\local".
+
+---
+## Generating Payload
