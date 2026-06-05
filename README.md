@@ -1,7 +1,8 @@
 # SOC Home Lab Guide
 
 ---
-## Downloading VMWare | Windows 10/11 | Kali Linux VMs | Sysmon | Splunk Enterprise  
+## Downloading Prerequisits
+### VMWare | Windows 10/11 | Kali Linux VMs | Sysmon | Splunk Enterprise | Powershell Scripts  
 [VMware](https://www.techpowerup.com/download/vmware-workstation-pro/)  
 [Windows 10](https://www.microsoft.com/en-gb/software-download/windows10)
 [Windows 11](https://www.microsoft.com/en-gb/software-download/windows11)  
@@ -9,7 +10,8 @@
 [Sysmon](https://download.sysinternals.com/files/Sysmon.zip)  
 [Sysmon Config](https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml)  
 [Splunk Enterprise](https://www.splunk.com/en_us/download/splunk-enterprise.html)  
-[Sysmon PowerShell Script](https://github.com/Trn44/SOC-Home-Lab/raw/main/Sysmon.ps1)
+[Sysmon Install PowerShell Script](https://github.com/Trn44/SOC-Home-Lab/raw/main/Sysmon.ps1)  
+[Windows Defender Disable Powershell Script](https://github.com/Trn44/SOC-Home-Lab/raw/main/Defender.ps1)
 
 ---
 ## Installing VMs | Sysmon | Splunk Setup
@@ -22,7 +24,7 @@ Install Splunk Enterprise from MSI installer to VM.
 
 - Copy & paste Sysmon, Sysmon Config to VM.  
 Unzip Sysmon folder, copy and paste sysmonconfig.xml into directory where Sysmon64.exe is located.  
-Download provided PowerShell Script and copy, paste into Sysmon root folder to 1 click install Sysmon.
+Download [Sysmon Install PowerShell Script](https://github.com/Trn44/SOC-Home-Lab/raw/main/Sysmon.ps1) and copy, paste into Sysmon root folder to 1 click install Sysmon.
 
 ---
 ## Creating Closed Local Virtual Network Environment
@@ -80,5 +82,5 @@ LHOST = The IP address of your Kali VM, Notepad.exe is our generated filename wh
 ## Windows Defender
 - In order to use msfvenom payloads on our Windows VM we must disable Windows Defender.
 Using msfvenom without obfuscation of our payload will be easily detected by antivirus software. For the simplicity and learning of payload functions and detections I will not attempt to obfuscate or evade antivirus.   
-On our Windows VM, using the [Defender](https://github.com/Trn44/SOC-Home-Lab/raw/main/Defender.ps1) PowerShell script we can disable all Windows Defender components.  
+On our Windows VM, using the [Defender](https://github.com/Trn44/SOC-Home-Lab/raw/main/Defender.ps1) PowerShell script we can 1 click disable all Windows Defender components.  
 Disabling defender when simulating an attack in a closed LAN environment is safe as we are not open to any vulnerabilities which can be used over an open network connection, only our own attacks.  
