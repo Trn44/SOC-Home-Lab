@@ -21,6 +21,8 @@ Extract Kali Linux Zip and Import VM.
 
 - Copy & paste Splunk Enterprise Installer to Windows VM.  
 Install Splunk Enterprise from MSI installer to VM.  
+- Download provided inputs.conf  
+Copy, paste inputs.conf into the Splunk directory for collecting sysmon logs "C:\Program Files\Splunk\etc\system\local".  
 
 - Copy & paste Sysmon, Sysmon Config to VM.  
 Unzip Sysmon folder, copy and paste sysmonconfig.xml into directory where Sysmon64.exe is located.  
@@ -60,11 +62,6 @@ Open terminal, type ifconfig to verify IP.
 In CMD/PowerShell type ping 192.168.0.200 (Your selected IP for Kali).  
 - Kali Linux:  
 In terminal type ping 192.168.0.100 (Your selected IP for Windows).
-
----
-## Splunk Configuration
-- Download provided inputs.conf  
-Copy, paste inputs.conf into the Splunk directory for collecting sysmon logs "C:\Program Files\Splunk\etc\system\local".
 
 ---
 ## Generating Payload
