@@ -15,7 +15,7 @@
 [Windows Defender Disable Powershell Script](https://github.com/Trn44/SOC-Home-Lab/raw/main/Defender.ps1)
 
 ---
-## Installing VMs | Sysmon | Splunk Setup
+## Installing VMs | Splunk Setup| Sysmon Setup
 - Download Windows ISO, Kali Linux VM  
 Install Windows VM from created ISO file.  
 Extract Kali Linux Zip and Import VM.  
@@ -80,7 +80,8 @@ LHOST = The IP address of your Kali VM, Notepad.exe is our generated filename wh
 Using msfvenom without obfuscation of our payload will be easily detected by antivirus software.  
 For the simplicity and learning of payload functions and detections I will not attempt to obfuscate or evade antivirus.  
 On our Windows VM, using the [Defender](https://github.com/Trn44/SOC-Home-Lab/raw/main/Defender.ps1) PowerShell script we can 1 click disable all Windows Defender components.  
-Disabling defender when simulating an attack in a closed LAN environment is safe as we are not open to any vulnerabilities which can be used over an open network connection, only our own attacks.
+Disabling defender when simulating an attack in a closed LAN environment is safe as we are not open to any vulnerabilities which can be used over an open network connection, only our own attacks.  
+- I DO NOT RECOMMEND YOU RUN THE SCRIPT ON YOUR DAILY/MAIN WINDOWS INSTALL.
 
 ---
 ## Opening Metasploit listener
