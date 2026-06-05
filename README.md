@@ -10,6 +10,7 @@
 [Sysmon](https://download.sysinternals.com/files/Sysmon.zip)  
 [Sysmon Config](https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml)  
 [Splunk Enterprise](https://www.splunk.com/en_us/download/splunk-enterprise.html)  
+[inputs.conf](https://github.com/Trn44/SOC-Home-Lab/raw/main/inputs.conf)  
 [Sysmon Install PowerShell Script](https://github.com/Trn44/SOC-Home-Lab/raw/main/Sysmon.ps1)  
 [Windows Defender Disable Powershell Script](https://github.com/Trn44/SOC-Home-Lab/raw/main/Defender.ps1)
 
@@ -21,7 +22,7 @@ Extract Kali Linux Zip and Import VM.
 
 - Copy & paste Splunk Enterprise Installer to Windows VM.  
 Install Splunk Enterprise from MSI installer to VM.  
-- Download provided inputs.conf  
+- Download [inputs.conf](https://github.com/Trn44/SOC-Home-Lab/raw/main/inputs.conf)  
 Copy, paste inputs.conf into the Splunk directory for collecting sysmon logs "C:\Program Files\Splunk\etc\system\local".  
 
 - Copy & paste Sysmon, Sysmon Config to VM.  
