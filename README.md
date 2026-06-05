@@ -123,4 +123,10 @@ We can see that Sysmon logs forwarded to Splunk show our payload source Notepad.
 <img width="595" height="591" alt="image" src="https://github.com/user-attachments/assets/26607cfe-3a6b-452d-bb9f-8d55d3a7bd48" />
 <img width="1424" height="798" alt="image" src="https://github.com/user-attachments/assets/82d63bb6-17e5-4ac5-819a-05a227bd4617" />
 
-- Checking Sysmon logs inside of the Windows event viewer show our Windows VM opening the Notepad.exe process spawning a cmd.exe process, leading to the DLL injection and execution of our "net user" command from our Kali machine.  
+- Checking Sysmon logs inside of the Windows event viewer show our Windows VM opening the Notepad.exe process spawning a cmd.exe process, leading to the DLL injection and execution of our "net user" command from our Kali machine.
+<img width="1173" height="731" alt="image" src="https://github.com/user-attachments/assets/56341f80-0e80-4e65-878e-3f0551b8ed51" />
+<img width="1181" height="733" alt="image" src="https://github.com/user-attachments/assets/b526cc3f-52bb-49a1-a62a-9c55bdbfbad6" />
+<img width="1171" height="728" alt="image" src="https://github.com/user-attachments/assets/de936311-8e35-426a-9165-a5df602f48b1" />
+
+
+
