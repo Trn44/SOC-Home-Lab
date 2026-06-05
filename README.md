@@ -128,5 +128,6 @@ We can see that Sysmon logs forwarded to Splunk show our payload source Notepad.
 <img width="1181" height="733" alt="image" src="https://github.com/user-attachments/assets/b526cc3f-52bb-49a1-a62a-9c55bdbfbad6" />
 <img width="1171" height="728" alt="image" src="https://github.com/user-attachments/assets/de936311-8e35-426a-9165-a5df602f48b1" />
 
-
-
+---
+## Complete
+- Successfully simulating a basic reverse shellcode injection attack from our Kali VM to Windows VM, we identified the source of our attack and the actions that were performed with the documentation of the event ID's and Task Category we can see: 1 = Process Creation, 10 = Process Access was used by the attacker. The logs identified the source of the attack being Notepad.exe in the Downloads folder and our destination was to the Kali VM at 192.168.0.200 port 4444.
