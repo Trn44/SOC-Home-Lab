@@ -115,3 +115,8 @@ Inside our Windows VM task manager, we can see that Notepad.exe is running in th
 
 - On Kali, we can type "shell" into our metaploit terminal and confirm access to the Windows machine, I checked using "ipconfig" and "net user".
 <img width="641" height="505" alt="image" src="https://github.com/user-attachments/assets/6c6ffb7c-fc5e-42d8-a9d6-2a5c4357e198" />
+
+
+- On Windows we can verify the activity through the Splunk logs and Sysmon logs.  
+We can see that Sysmon logs forwarded to Splunk show our payload source Notepad.exe and target cmd.exe. The destination IP address of our Kali machine can also be indentified with 192.168.0.200 and port number 4444.  
+
