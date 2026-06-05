@@ -34,7 +34,7 @@ Download [Sysmon Install PowerShell Script](https://github.com/Trn44/SOC-Home-La
 - Select Newly created LAN network under the drop down menu on "LAN Segment:".
 
 ---
-## Asigning IP Addresses
+## Asigning IP Addresses & Verifying Network
 - On Windows 10/11:  
 Right-click the globe in system tray, Open Network & Internet Settings  
 Click Change adapter options  
@@ -56,12 +56,10 @@ Netmask: 24
 Click Save  
 Open terminal, type ifconfig to verify IP.
 
----
-## Verify Network
 - Windows:  
 In CMD/PowerShell type ping 192.168.0.200 (Your selected IP for Kali).  
 - Kali Linux:  
-In terminal type ping 192.168.0.100 (Your selected IP for WIndows).
+In terminal type ping 192.168.0.100 (Your selected IP for Windows).
 
 ---
 ## Splunk Configuration
@@ -98,7 +96,7 @@ Lastly, to launch our reverse TCP listener we can type "exploit" into the termin
 <img width="793" height="518" alt="image" src="https://github.com/user-attachments/assets/cebac611-27d5-4fdb-9f5a-a6eee70b96f1" />
 
 ---
-## Sending the payload to our WIndows VM
+## Sending the payload to our Windows VM
 - To send our payload we can use a HTTP server on Python.  
 On our Kali VM terminal we can type "python3 -m http.server 8888" using any unused port.  
 On our Windows VM, open a browser and type "http://192.168.0.200:8888" to access the web server where the payload is being hosted and download it. We should be able to see on our Kali VM the IP of our Windows VM connecting to our server and downloading the file.
@@ -129,5 +127,5 @@ We can see that Sysmon logs forwarded to Splunk show our payload source Notepad.
 <img width="1171" height="728" alt="image" src="https://github.com/user-attachments/assets/de936311-8e35-426a-9165-a5df602f48b1" />
 
 ---
-## Complete
+## Completion | Review
 - Successfully simulating a basic reverse shellcode injection attack from our Kali VM to Windows VM, we identified the source of our attack and the actions that were performed with the documentation of the event ID's and Task Category we can see: 1 = Process Creation, 10 = Process Access was used by the attacker. The logs identified the source of the attack being Notepad.exe in the Downloads folder and our destination was to the Kali VM at 192.168.0.200 port 4444.
