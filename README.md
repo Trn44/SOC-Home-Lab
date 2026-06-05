@@ -15,7 +15,7 @@
 [Windows Defender Disable Powershell Script](https://github.com/Trn44/SOC-Home-Lab/raw/main/Defender.ps1)
 
 ---
-## Installing VMs | Splunk Setup| Sysmon Setup
+## Installing VMs | Splunk Setup | Sysmon Setup
 - Download Windows ISO, Kali Linux VM  
 Install Windows VM from created ISO file.  
 Extract Kali Linux Zip and Import VM.  
@@ -84,7 +84,7 @@ Disabling defender when simulating an attack in a closed LAN environment is safe
 - I DO NOT RECOMMEND YOU RUN THE SCRIPT ON YOUR DAILY/MAIN WINDOWS INSTALL.
 
 ---
-## Opening Metasploit listener
+## Opening Metasploit Listener
 - Using Metasploit we can set our Kali VM to be the listener for our payload to generate our reverse tcp shellcode and recieve information from our Windows VM.  
 In the terminal we can type "msfconsole" to load Metasploit.  
 Next we can setup a multi handler through the command "user exploit/multi/handler".  
@@ -95,7 +95,7 @@ Lastly, to launch our reverse TCP listener we can type "exploit" into the termin
 <img width="793" height="518" alt="image" src="https://github.com/user-attachments/assets/cebac611-27d5-4fdb-9f5a-a6eee70b96f1" />
 
 ---
-## Sending the payload to our Windows VM
+## Sending The Payload To Our Windows VM
 - To send our payload we can use a HTTP server on Python.  
 On our Kali VM terminal we can type "python3 -m http.server 8888" using any unused port.  
 On our Windows VM, open a browser and type "http://192.168.0.200:8888" to access the web server where the payload is being hosted and download it. We should be able to see on our Kali VM the IP of our Windows VM connecting to our server and downloading the file.
@@ -103,7 +103,7 @@ On our Windows VM, open a browser and type "http://192.168.0.200:8888" to access
 <img width="913" height="313" alt="image" src="https://github.com/user-attachments/assets/68f1ca46-aacf-43a1-99d9-4417ff02273d" />
 
 ---
-## Running the payload & Confirming connectivity
+## Running The Payload & Confirming Connectivity
 - Run the payload file on our Windows machine and open a PowerShell terminal as admin.  
 Typing "netstat -anob" in PowerShell we can confirm our connection was successful if we see the Application with the payload Notepad.exe and an ESTABLISHED connection to the Kali VM's IP/Port number.  
 Inside our Windows VM task manager, we can see that Notepad.exe is running in the background, matching the process ID 7220 with the listed one in PowerShell.
