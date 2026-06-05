@@ -105,3 +105,7 @@ On our Windows VM, open a browser and type "http://192.168.0.200:8888" to access
 <img width="520" height="107" alt="image" src="https://github.com/user-attachments/assets/fe131ab4-b4d4-4c6c-8b3b-7f256048492a" />
 <img width="913" height="313" alt="image" src="https://github.com/user-attachments/assets/68f1ca46-aacf-43a1-99d9-4417ff02273d" />
 
+---
+## Running the payload & Confirming connectivity
+- Run the payload file on our Windows machine and open a PowerShell terminal as admin.  
+Typing "netstat -anob" in PowerShell we can confirm our connection was successful if we see the Application with the payload Notepad.exe and an ESTABLISHED connection to the Kali VM's IP/Port number.  
