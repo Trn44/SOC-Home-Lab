@@ -112,3 +112,6 @@ Typing "netstat -anob" in PowerShell we can confirm our connection was successfu
 Inside our Windows VM task manager, we can see that Notepad.exe is running in the background, matching the process ID 7220 with the listed one in PowerShell.
 <img width="540" height="26" alt="image" src="https://github.com/user-attachments/assets/a339d35e-ac4d-4a7c-8da9-bcb1d3657db4" />
 <img width="549" height="19" alt="image" src="https://github.com/user-attachments/assets/200e880d-0b5a-4e60-a7e7-eab8ee887484" />
+
+- On Kali, we can type "shell" into our metaploit terminal and confirm access to the Windows machine, I checked using "ipconfig" and "net user".
+<img width="641" height="505" alt="image" src="https://github.com/user-attachments/assets/6c6ffb7c-fc5e-42d8-a9d6-2a5c4357e198" />
